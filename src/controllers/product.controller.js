@@ -31,7 +31,7 @@ exports.updateProduct = (req, res) => {
 exports.deleteProduct = (req, res) => {
     const result = productService.delete(req.params.id)
     if (result) {
-        res.status(204).json()
+        res.status(204).json({ "Status": "Success"})
     } else {
         res.status(404).json({ "Status": "Not Found" })
     }
